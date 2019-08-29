@@ -1,0 +1,14 @@
+#! /bin/bash
+
+for i in {1..100}; do
+	if [ "$[$i % 3]" -eq "0" ]; then
+		printf "Fizz"
+	fi
+	if [ "$[$i % 5]" -eq "0" ]; then
+		printf "Buzz"
+	fi
+	if [[ $[$i % 3] -gt 0 && $[$i % 5] -gt 0 ]]; then
+		printf "$i"
+	fi
+	printf "\n"
+done
