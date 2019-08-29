@@ -1,14 +1,14 @@
 #! /bin/bash
 
 for i in {1..100}; do
-	if [ "$[$i % 3]" -eq "0" ]; then
+	if [ "$[$i % 3]" -eq "0" ]; then # Check if $i is divisible by 3
 		printf "Fizz"
 	fi
-	if [ "$[$i % 5]" -eq "0" ]; then
+	if [ "$[$i % 5]" -eq "0" ]; then # Check if $i is divisible by 5
 		printf "Buzz"
 	fi
-	if [[ $[$i % 3] -gt 0 && $[$i % 5] -gt 0 ]]; then
+	if [[ $[$i % 3] -gt 0 && $[$i % 5] -gt 0 ]]; then # Check if $i is divisible by neither 3 nor 5
 		printf "$i"
 	fi
-	printf "\n"
+	printf "\n" # Printing a newline character is at this point so that Fizz and Buzz are placed on the same line for multiples of 15
 done
